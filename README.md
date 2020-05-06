@@ -5,6 +5,6 @@ This code computes the Generalised Forman Ricci Curvature for simplicial complex
 Many thanks to stephenhky and saibalmars for their inspiration in the packages MoguTDA and saibalmars. 
 Partial code was adapted from MoguTDA to import simplicial complex from NetworkX.
 
-# References
-stephanhky: https://github.com/stephenhky/MoguTDA
-saibalmars: https://github.com/saibalmars/GraphRicciCurvature
+## References
+*stephanhky: https://github.com/stephenhky/MoguTDA
+*saibalmars: https://github.com/saibalmars/GraphRicciCurvature
