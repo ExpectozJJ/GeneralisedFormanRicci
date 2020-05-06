@@ -6,5 +6,5 @@ Many thanks to stephenhky and saibalmars for their inspiration in the packages M
 Partial code was adapted from MoguTDA to import simplicial complex from NetworkX.
 
 ## References
-* stephanhky: https://github.com/stephenhky/MoguTDA
-* saibalmars: https://github.com/saibalmars/GraphRicciCurvature
+* MoguTDA: https://github.com/stephenhky/MoguTDA
+* GraphRicciCurvature: https://github.com/saibalmars/GraphRicciCurvature
