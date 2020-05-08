@@ -57,36 +57,6 @@ def boundary_operator(face_set, i):
     
     return S
 
-def _compute_forman(faceset, simplex):
-    """ Computes the forman curvature for simplex input with a given simplicial complex. 
-
-    Inputs
-    -----------
-    faceset: simplicial complex 
-    simplex: i-dimensional simplex 
-
-    Output: 
-    -----------
-    Forman Ricci Curvature for i-dimensional simplex
-    """
-
-    i = len(simplex)
-    if i >= 2:
-        #source_simplices = list(n_faces(self.S, i))
-        target_simplices = list(n_faces(faceset, i-1))
-
-        #source_simplices_dict = {source_simplices[j]: j for j in range(len(source_simplices))}
-        target_simplices_dict = {target_simplices[i]: i for i in range(len(target_simplices))}
-
-        b1 = boundary_operator(faceset, i).toarray()
-        b2 = boundary_operator(faceset, i-1).toarray()
-        b1_ = np.matmul(b1, np.transpose(b1))-np.diag(np.diag(np.matmul(b1, np.transpose(b1))))
-        b2_ = np.matmul(np.transpose(b2), b2)-np.diag(np.diag(np.matmul(np.transpose(b2), b2)))
-        p1 = b1_[target_simplices_dict[simplex]]
-        p2 = b2_[target_simplices_dict[simplex]]
-
-        return sum(b1[target_simplices_dict[simplex]]!=0) + len(simplex) - sum(np.logical_xor(p1,p2))
-
 class GeneralisedFormanRicci:
     
     def __init__(self, G: nx.Graph):
@@ -121,25 +91,40 @@ class GeneralisedFormanRicci:
 
         forman_dict = dict()
 
-        if p > 1:
-            for i in range(len(self.S)):
-                #print(self.S[i], _compute_prl_nbr(self.S, self.S[i]))
-                if len(self.S[i])-1 <= p and len(self.S[i])-1 > 0:
-                    forman_dict[self.S[i]] = _compute_forman(self.S, self.S[i])
-        else:
-            for (v1, v2) in self.G.edges():
-                forman_dict[(v1,v2)] = _compute_forman(self.S, (v1,v2))
+        if p < 1:
+            p = 1
+
+        bop_data = []
+        for i in range(1, p+1):
+            bop_data.append(boundary_operator(self.S, i).toarray())
+
+        for simplex in self.S:
+            l = len(simplex)
+            if l <= p+1 and l >= 2:
+                target_simplices = list(n_faces(self.S, l-1))
+                target_simplices_dict = {target_simplices[i]: i for i in range(len(target_simplices))}
+                m = target_simplices_dict[simplex]
+                #print(s, m)
+                
+                #print(simplex, l)
+                b1_ = np.matmul(bop_data[l-1], np.transpose(bop_data[l-1]))-np.diag(np.diag(np.matmul(bop_data[l-1], np.transpose(bop_data[l-1]))))
+                b2_ = np.matmul(np.transpose(bop_data[l-2]), bop_data[l-2])-np.diag(np.diag(np.matmul(np.transpose(bop_data[l-2]), bop_data[l-2])))
+                p1 = b1_[m]
+                p2 = b2_[m]
+
+                forman_dict[l-1][simplex] = sum(bop_data[l-1][m]!=0) + len(simplex) - sum(np.logical_xor(p1,p2))
+                #print(simplex, forman_dict[simplex])
         
         for v in self.G.nodes():
             cur_sum = 0
             if self.G.degree(v) > 0:
                 for n in self.G.neighbor(v):
                     try:
-                        cur_sum += forman_dict[(v,n)]
+                        cur_sum += forman_dict[1][(v,n)]
                     except:
-                        cur_sum += forman_dict[(n,v)]
-                forman_dict[(v,)] = cur_sum/self.G.degree(v)
+                        cur_sum += forman_dict[1][(n,v)]
+                forman_dict[0][(v,)] = cur_sum/self.G.degree(v)
             else:
-                forman_dict[(v,)] = 0
+                forman_dict[0][(v,)] = 0
         
         return forman_dict
