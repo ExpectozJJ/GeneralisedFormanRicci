@@ -9,3 +9,5 @@ Partial code was modified from MoguTDA for the computation of the simplicial com
 ## References
 * MoguTDA: https://github.com/stephenhky/MoguTDA
 * GraphRicciCurvature: https://github.com/saibalmars/GraphRicciCurvature
+* Forman, R. (2003). Bochner's method for cell complexes and combinatorial Ricci curvature. Discrete and Computational Geometry, 29(3), 323-374.
+* Forman, R. (1999). Combinatorial Differential Topology and Geometry. New Perspectives in Algebraic Combinatorics, 38, 177.
