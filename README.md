@@ -3,8 +3,8 @@
 # GeneralisedFormanRicci
 This code computes the Generalised Forman Ricci Curvature for simplicial complex generated from a given point cloud data. The implementation is based on the unweighted definition of Forman Ricci curvature defined by Robin Forman. 
 
-Many thanks to stephenhky and saibalmars for their inspiration in the packages MoguTDA and GraphRicciCurvature respectively. 
-Partial code was modified from MoguTDA for the computation of the simplicial complex. 
+Many thanks to stephenhky and saibalmars for their packages MoguTDA and GraphRicciCurvature respectively. 
+Partial code was modified from MoguTDA for the computation of the boundary matrices. 
 
 ## References
 * MoguTDA: https://github.com/stephenhky/MoguTDA
