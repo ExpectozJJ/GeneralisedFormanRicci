@@ -4,7 +4,7 @@ A class to compute the Generalised Forman-Ricci curvature for a Simplicial Compl
 
 # Author:
 #     Wee JunJie
-#     https://github.com/ExpectozJJ/GeneralisedFormanRicci
+#     https://github.com/ExpectozJJ
 #
 # Remarks:
 # Many thanks to stephenhky and saibalmars for their packages MoguTDA and saibalmars. 
@@ -15,7 +15,7 @@ A class to compute the Generalised Forman-Ricci curvature for a Simplicial Compl
 from itertools import combinations
 from scipy.sparse import dok_matrix
 from scipy.spatial import Delaunay
-from operator import add
+from operator import add, itemgetter
 import numpy as np 
 import networkx as nx 
 import gudhi
@@ -98,12 +98,14 @@ class GeneralisedFormanRicci:
         if self.method == "rips":
             try:
                 self.S = self.construct_rips(self.p)
+                print("Rips Complex Constructed.")
             except:
                 raise('epsilon not defined for rips method.')
         elif self.method == "alpha":
             self.S = self.construct_alpha(self.p)
         else:
             raise("Unknown method specified.")
+
 
         """
         Compute and Store Hodge Laplacian up to dimension p. 
@@ -121,13 +123,12 @@ class GeneralisedFormanRicci:
         #self.G = gen_graph(list(n_faces(self.S, 1)), self.pts, self.labels)
 
     def construct_alpha(self, p):
-        d = self.epsilon
         alpha_complex = gudhi.AlphaComplex(self.pts)
-        alpha = alpha_complex.create_simplex_tree(max_alpha_square = (d*d)/4)
+        alpha = alpha_complex.create_simplex_tree()
         val = alpha.get_filtration()
         simplices = set()
         for v in val:
-            if len(v[0]) <= p+1:
+            if len(v[0]) <= p+1 and np.sqrt(v[1])*2 <= self.epsilon: #circumradius must be converted to diameter and within the filtration parameter
                 simplices.add(tuple(v[0]))
 
         return simplices
@@ -138,7 +139,8 @@ class GeneralisedFormanRicci:
         val = simplex_tree.get_filtration()
         simplices = set()
         for v in val:
-            simplices.add(tuple(v[0]))
+            if len(v[0]) <= p+1:
+                simplices.add(tuple(v[0]))
 
         return simplices
 
