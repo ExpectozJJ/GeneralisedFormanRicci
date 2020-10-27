@@ -14,8 +14,7 @@ A class to compute the Generalised Forman-Ricci curvature for a Simplicial Compl
 
 from itertools import combinations
 from scipy.sparse import dok_matrix
-from scipy.spatial import Delaunay
-from operator import add, itemgetter
+from operator import add
 import numpy as np 
 import networkx as nx 
 import gudhi
@@ -74,7 +73,7 @@ def boundary_operator(face_set, i):
 class GeneralisedFormanRicci:
     
     def __init__(self, points, labels=None, epsilon=2.0, method="rips", p = 2):
-        """A class to compute Generalised Forman-Ricci curvature for a specified p-dimensional simplex from a simplicial complex generated from point cloud data
+        """A class to compute Generalised Forman-Ricci curvature for a specified p-dimensional simplex from a simplicial complex generated from point cloud data.
         
         Parameters
         ----------
@@ -120,7 +119,7 @@ class GeneralisedFormanRicci:
             self.laplacian.append(b1_+b2_)
 
         # Constructing Networkx Graph might take awhile.
-        #self.G = gen_graph(list(n_faces(self.S, 1)), self.pts, self.labels)
+        # self.G = gen_graph(list(n_faces(self.S, 1)), self.pts, self.labels)
 
     def construct_alpha(self, p):
         alpha_complex = gudhi.AlphaComplex(self.pts)
@@ -144,6 +143,16 @@ class GeneralisedFormanRicci:
 
         return simplices
 
+    def compute_bochner(self):
+
+        la = self.laplacian
+        boch = []
+        for i in range(len(la)):
+            temp = la[i]-np.diag(np.diag(la[i])) #Bochner-Weitzenböck Decomposition
+            boch.append(np.diag(np.sum(temp, axis=1)))
+
+        return boch
+
     def _compute_forman(self, simplex):
         """
         Lookup the values in Hodge Laplacian and Compute the Forman Ricci Curvature
@@ -158,7 +167,7 @@ class GeneralisedFormanRicci:
             Minimise usage of np.matmul and np.diag as time takes longer for large simplicial complex.
             """
             mat = np.delete(self.laplacian[l-1][m], m) 
-            val = self.laplacian[l-1][m][m] - sum(np.abs(mat))
+            val = self.laplacian[l-1][m][m] - sum(np.abs(mat)) #Bochner-Weitzenböck Decomposition
             
             return val
 
