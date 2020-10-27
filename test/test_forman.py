@@ -3,7 +3,8 @@ from GeneralisedFormanRicci.frc import GeneralisedFormanRicci
 data = [[0.8, 2.6], [0.2, 1.0], [0.9, 0.5], [2.7, 1.8], [1.7, 0.5], [2.5, 2.5], [2.4, 1.0], [0.6, 0.9], [0.4, 2.2]]
 sc = GeneralisedFormanRicci(data, method = "rips", epsilon = 3)
 sc.compute_forman()
-assert sc.compute_forman() == {2: {(1, 2, 8): 9.0, (0, 5, 7): 9.0,
+assert sc.compute_forman() == {2: {(1, 2, 8): 9.0,
+              (0, 5, 7): 9.0,
               (2, 6, 7): 9.0,
               (0, 2, 3): 9.0,
               (0, 7, 8): 9.0,
