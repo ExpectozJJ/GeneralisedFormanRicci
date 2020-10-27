@@ -8,7 +8,7 @@ Partial code was modified from MoguTDA for the computation of the boundary matri
 
 ## Installation
 
-`pip install GeneralisedFormanRicci==0.0.2`
+`pip install GeneralisedFormanRicci`
 
 Upgrading via `pip install --upgrade GeneralisedFormanRicci`
 
