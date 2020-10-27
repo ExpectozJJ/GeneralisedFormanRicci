@@ -6,6 +6,16 @@ This code computes the Forman Ricci Curvature for simplicial complex generated f
 Many thanks to stephenhky and saibalmars for their packages MoguTDA and GraphRicciCurvature respectively. 
 Partial code was modified from MoguTDA for the computation of the boundary matrices. 
 
+# Installation
+
+`pip install GeneralisedFormanRicci==0.0.2`
+
+## Package Requirement
+
+* [NetworkX](https://github.com/networkx/networkx) >= 2.0 (Based Graph library)
+* [GUDHI](https://github.com/GUDHI) (Simplicial Complex Library)
+* [NumPy](https://github.com/numpy/numpy)
+
 ## References
 * MoguTDA: https://github.com/stephenhky/MoguTDA
 * GraphRicciCurvature: https://github.com/saibalmars/GraphRicciCurvature
