@@ -32,7 +32,6 @@ steps:
   displayName: 'pytest'
 
 # Single task
-steps:
 - template: test/test_forman.py
   displayName: Compute Forman Ricci Curvature for simplicial complex
   condition: and(succeeded(), variables.task)
