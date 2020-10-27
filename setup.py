@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="GeneralisedFormanRicci", # Replace with your own username
-    version="0.0.2",
+    version="0.0.3",
     author="Wee JunJie",
     author_email="expectozjj@gmail.com",
     description="A class to compute the Generalised Forman-Ricci curvature for a Simplicial Complex from a given point cloud data.",
