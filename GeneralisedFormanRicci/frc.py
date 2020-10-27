@@ -148,7 +148,7 @@ class GeneralisedFormanRicci:
         boch = []
         for i in range(len(la)):
             temp = la[i]-np.diag(np.diag(la[i])) #Bochner-Weitzenböck Decomposition
-            boch.append(np.diag(np.sum(temp, axis=1)))
+            boch.append(temp + np.diag(np.sum(np.abs(temp), axis=1)))
 
         return boch
 
