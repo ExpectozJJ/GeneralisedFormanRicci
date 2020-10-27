@@ -19,6 +19,7 @@ Upgrading via `pip install --upgrade GeneralisedFormanRicci`
 * [NetworkX](https://github.com/networkx/networkx) >= 2.0 (Based Graph library)
 * [GUDHI](https://github.com/GUDHI) (Simplicial Complex Library)
 * [NumPy](https://github.com/numpy/numpy)
+* [SciPy](https://github.com/scipy/scipy)
 
 ## Simple Example
 
