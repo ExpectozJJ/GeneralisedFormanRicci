@@ -1,4 +1,4 @@
 numpy
 scipy
-networkx
+networkx>= 2.0
 gudhi
