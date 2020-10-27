@@ -127,7 +127,7 @@ class GeneralisedFormanRicci:
         val = alpha.get_filtration()
         simplices = set()
         for v in val:
-            if len(v[0]) <= p+1 and np.sqrt(v[1])*2 <= self.epsilon: #circumradius must be converted to diameter and within the filtration parameter
+            if np.sqrt(v[1])*2 <= self.epsilon: #circumradius must be converted to diameter and within the filtration parameter
                 simplices.add(tuple(v[0]))
 
         return simplices
@@ -138,8 +138,7 @@ class GeneralisedFormanRicci:
         val = simplex_tree.get_filtration()
         simplices = set()
         for v in val:
-            if len(v[0]) <= p+1:
-                simplices.add(tuple(v[0]))
+            simplices.add(tuple(v[0]))
 
         return simplices
 
