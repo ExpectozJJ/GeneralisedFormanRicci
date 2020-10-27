@@ -30,6 +30,7 @@ data = [[0.8, 2.6], [0.2, 1.0], [0.9, 0.5], [2.7, 1.8], [1.7, 0.5], [2.5, 2.5], 
 for f in [0, 0.5, 1, 2, 3]:
     sc = GeneralisedFormanRicci(data, method = "rips", epsilon = f)
     sc.compute_forman()
+    sc.compute_bochner()
 ```
 
 ## References
