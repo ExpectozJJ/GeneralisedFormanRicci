@@ -2,4 +2,3 @@ numpy
 scipy
 gudhi
 networkx
-GeneralisedFormanRicci
