@@ -10,6 +10,8 @@ Partial code was modified from MoguTDA for the computation of the boundary matri
 
 `pip install GeneralisedFormanRicci==0.0.2`
 
+Upgrading via `pip install --upgrade GeneralisedFormanRicci`
+
 ## Package Requirement
 
 * [NetworkX](https://github.com/networkx/networkx) >= 2.0 (Based Graph library)
