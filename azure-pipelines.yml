@@ -33,4 +33,3 @@ steps:
 
 # Single task
 - template: test/test_forman.py
-  displayName: 'Compute Forman Ricci Curvature for simplicial complex'
