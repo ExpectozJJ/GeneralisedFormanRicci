@@ -1,5 +1,5 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
-![PyPI](https://img.shields.io/pypi/v/GeneralisedFormanRicci?)
+![PyPI](https://img.shields.io/pypi/v/GeneralisedFormanRicci?) 
 [![CodeFactor](https://www.codefactor.io/repository/github/expectozjj/generalisedformanricci/badge/master)](https://www.codefactor.io/repository/github/expectozjj/generalisedformanricci/overview/master)
 
 # GeneralisedFormanRicci
