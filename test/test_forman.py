@@ -1,3 +1,4 @@
+import pytest
 from GeneralisedFormanRicci.frc import GeneralisedFormanRicci
 
 data = [[0.8, 2.6], [0.2, 1.0], [0.9, 0.5], [2.7, 1.8], [1.7, 0.5], [2.5, 2.5], [2.4, 1.0], [0.6, 0.9], [0.4, 2.2]]
