@@ -1,5 +1,6 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
 ![PyPI](https://img.shields.io/pypi/v/GeneralisedFormanRicci)
+[![CodeFactor](https://www.codefactor.io/repository/github/expectozjj/generalisedformanricci/badge/master)](https://www.codefactor.io/repository/github/expectozjj/generalisedformanricci/overview/master)
 
 # GeneralisedFormanRicci
 This code computes the Forman Ricci Curvature for simplicial complex generated from a given point cloud data. The implementation is based on the combinatorial definition of Forman Ricci curvature defined by Robin Forman. This implementation generalises beyond the simplified version implemented in saibalmars/GraphRicciCurvature github.
