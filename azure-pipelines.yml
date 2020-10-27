@@ -32,4 +32,4 @@ steps:
   displayName: 'pytest'
 
 # Single task
-- template: test/test_forman.py
+- script: test/test_forman.py
