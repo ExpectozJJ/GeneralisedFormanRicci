@@ -4,15 +4,45 @@
 [![Anaconda-Server Badge](https://anaconda.org/conda-forge/generalisedformanricci/badges/downloads.svg)](https://anaconda.org/conda-forge/generalisedformanricci)
 [![CodeFactor](https://www.codefactor.io/repository/github/expectozjj/generalisedformanricci/badge/master)](https://www.codefactor.io/repository/github/expectozjj/generalisedformanricci/overview/master)
 
+<table><tr><td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11012&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/generalisedformanricci-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
+
 # GeneralisedFormanRicci
 This code computes the Forman Ricci Curvature for simplicial complex generated from a given point cloud data. The implementation is based on the combinatorial definition of Forman Ricci curvature defined by Robin Forman. This implementation generalises beyond the simplified version implemented in saibalmars/GraphRicciCurvature github.
 
 Many thanks to stephenhky and saibalmars for their packages MoguTDA and GraphRicciCurvature respectively. 
 Partial code was modified from MoguTDA for the computation of the boundary matrices. 
 
-## Installation
+Installation via conda-forge
+=================================
 
-`pip install GeneralisedFormanRicci` or via `conda install -c conda-forge generalisedformanricci`
+Installing `generalisedformanricci` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+
+```
+conda config --add channels conda-forge
+```
+
+Once the `conda-forge` channel has been enabled, `generalisedformanricci` can be installed with:
+
+```
+conda install generalisedformanricci
+```
+
+It is possible to list all of the versions of `generalisedformanricci` available on your platform with:
+
+```
+conda search generalisedformanricci --channel conda-forge
+```
+
+## Installation via pip
+
+`pip install GeneralisedFormanRicci`
 
 Upgrading via `pip install --upgrade GeneralisedFormanRicci`
 
