@@ -19,7 +19,7 @@ This code computes the Forman Ricci Curvature for simplicial complex generated f
 Many thanks to stephenhky and saibalmars for their packages MoguTDA and GraphRicciCurvature respectively. 
 Partial code was modified from MoguTDA for the computation of the boundary matrices. 
 
-Installation via conda-forge
+## Installation via conda-forge
 =================================
 
 Installing `generalisedformanricci` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
