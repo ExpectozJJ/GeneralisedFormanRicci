@@ -1,8 +1,10 @@
-[![Anaconda-Server Badge](https://anaconda.org/conda-forge/generalisedformanricci/badges/installer/conda.svg)](https://conda.anaconda.org/conda-forge)
+[![Anaconda-Server Badge](https://img.shields.io/badge/install%20with-conda-brightgreen)](https://conda.anaconda.org/conda-forge)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
 ![PyPI](https://img.shields.io/pypi/v/GeneralisedFormanRicci?) 
-[![Anaconda-Server Badge](https://anaconda.org/conda-forge/generalisedformanricci/badges/downloads.svg)](https://anaconda.org/conda-forge/generalisedformanricci)
+![PyPI - Downloads](https://img.shields.io/pypi/dd/GeneralisedFormanRicci)
+![Conda](https://img.shields.io/conda/dn/conda-forge/generalisedformanricci)
 [![CodeFactor](https://www.codefactor.io/repository/github/expectozjj/generalisedformanricci/badge/master)](https://www.codefactor.io/repository/github/expectozjj/generalisedformanricci/overview/master)
+![Conda](https://img.shields.io/conda/pn/conda-forge/generalisedformanricci?color=red)
 
 <table><tr><td>All platforms:</td>
     <td>
