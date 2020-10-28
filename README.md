@@ -10,7 +10,7 @@ Partial code was modified from MoguTDA for the computation of the boundary matri
 
 ## Installation via conda-forge
 
-[![Anaconda-Server Badge](https://img.shields.io/badge/install%20with%20-conda--forge-yellowgreen)](https://conda.anaconda.org/conda-forge)
+[![Anaconda-Server Badge](https://img.shields.io/badge/install%20with%20-conda--forge-yellowgreen)](https://anaconda.org/conda-forge/generalisedformanricci)
 ![Conda (channel only)](https://img.shields.io/conda/vn/conda-forge/generalisedformanricci)
 ![Conda](https://img.shields.io/conda/dn/conda-forge/generalisedformanricci)
 ![Conda](https://img.shields.io/conda/pn/conda-forge/generalisedformanricci?color=red)
