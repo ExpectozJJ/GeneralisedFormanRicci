@@ -1,5 +1,7 @@
+[![Anaconda-Server Badge](https://anaconda.org/conda-forge/generalisedformanricci/badges/installer/conda.svg)](https://conda.anaconda.org/conda-forge)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
 ![PyPI](https://img.shields.io/pypi/v/GeneralisedFormanRicci?) 
+[![Anaconda-Server Badge](https://anaconda.org/conda-forge/generalisedformanricci/badges/downloads.svg)](https://anaconda.org/conda-forge/generalisedformanricci)
 [![CodeFactor](https://www.codefactor.io/repository/github/expectozjj/generalisedformanricci/badge/master)](https://www.codefactor.io/repository/github/expectozjj/generalisedformanricci/overview/master)
 
 # GeneralisedFormanRicci
@@ -10,7 +12,7 @@ Partial code was modified from MoguTDA for the computation of the boundary matri
 
 ## Installation
 
-`pip install GeneralisedFormanRicci`
+`pip install GeneralisedFormanRicci` or via `conda install -c conda-forge generalisedformanricci`
 
 Upgrading via `pip install --upgrade GeneralisedFormanRicci`
 
