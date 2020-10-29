@@ -1,3 +1,6 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ExpectozJJ/GeneralisedFormanRicci/master?filepath=tutorial%2FGeneralisedFormanRicci-demo.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ExpectozJJ/GeneralisedFormanRicci/blob/master/tutorial/GeneralisedFormanRicci-demo.ipynb)
+[![Downloads](https://static.pepy.tech/personalized-badge/generalisedformanricci?period=month&units=international_system&left_color=black&right_color=brightgreen&left_text=Downloads)](https://pepy.tech/project/generalisedformanricci)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
 [![CodeFactor](https://www.codefactor.io/repository/github/expectozjj/generalisedformanricci/badge/master)](https://www.codefactor.io/repository/github/expectozjj/generalisedformanricci/overview/master)
 ![Azure](https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/generalisedformanricci-feedstock?branchName=master)
