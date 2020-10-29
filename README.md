@@ -35,8 +35,7 @@ conda search generalisedformanricci --channel conda-forge
 
 ## Installation via pip
 
-![PyPI](https://img.shields.io/pypi/v/GeneralisedFormanRicci?) 
-![PyPI - Downloads](https://img.shields.io/pypi/dd/GeneralisedFormanRicci)
+![PyPI](https://img.shields.io/pypi/v/GeneralisedFormanRicci)
 
 `pip install GeneralisedFormanRicci`
 
