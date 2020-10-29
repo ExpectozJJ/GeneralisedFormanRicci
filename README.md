@@ -36,6 +36,8 @@ It is possible to list all of the versions of `generalisedformanricci` available
 conda search generalisedformanricci --channel conda-forge
 ```
 
+Alternatively, `generalisedformanricci` can be installed just by `conda install -c conda-forge generalisedformanricci`.
+
 ## Installation via pip
 
 ![PyPI](https://img.shields.io/pypi/v/GeneralisedFormanRicci)
