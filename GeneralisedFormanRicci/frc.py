@@ -87,11 +87,14 @@ class GeneralisedFormanRicci:
         epsilon: Diameter
 
         """
-        if points is not None:
-            self.pts = np.array(points)
         
         if distance_matrix is not None:
             self.dm = distance_matrix
+
+        if points is not None:
+            self.pts = np.array(points)
+        else:
+            self.pts = None
 
         if points is not None and distance_matrix is not None:
             raise("Double inputs with point cloud and distance matrix.")
