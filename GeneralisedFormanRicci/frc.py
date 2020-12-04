@@ -94,7 +94,7 @@ class GeneralisedFormanRicci:
             self.dm = distance_matrix
 
         if points is not None and distance_matrix is not None:
-            raise("Double inputs with point cloud and distance matrix.")s
+            raise("Double inputs with point cloud and distance matrix.")
 
         self.labels = {'coords': self.pts} if labels == None else labels
         self.method = method
