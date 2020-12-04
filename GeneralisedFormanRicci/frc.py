@@ -72,7 +72,7 @@ def boundary_operator(face_set, i):
 
 class GeneralisedFormanRicci:
     
-    def __init__(self, points, labels=None, epsilon=2.0, method="rips", p = 2):
+    def __init__(self, points=None, distance_matrix=None,labels=None, epsilon=2.0, method="rips", p = 2):
         """A class to compute Generalised Forman-Ricci curvature for a specified p-dimensional simplex from a simplicial complex generated from point cloud data.
         
         Parameters
@@ -87,8 +87,15 @@ class GeneralisedFormanRicci:
         epsilon: Diameter
 
         """
+        if points is not None:
+            self.pts = np.array(points)
+        
+        if distance_matrix is not None:
+            self.dm = distance_matrix
 
-        self.pts = np.array(points)
+        if points is not None and distance_matrix is not None:
+            raise("Double inputs with point cloud and distance matrix.")s
+
         self.labels = {'coords': self.pts} if labels == None else labels
         self.method = method
         self.epsilon = epsilon
@@ -105,6 +112,8 @@ class GeneralisedFormanRicci:
         else:
             raise("Unknown method specified.")
 
+        if self.method == "alpha" and distance_matrix is not None:
+            raise("GUDHI Alpha Complex requires point cloud data.")
 
         """
         Compute and Store Hodge Laplacian up to dimension p. 
@@ -133,7 +142,10 @@ class GeneralisedFormanRicci:
         return simplices
 
     def construct_rips(self, p):
-        rips_complex = gudhi.RipsComplex(points = self.pts, max_edge_length = self.epsilon)
+        if self.pts is not None:
+            rips_complex = gudhi.RipsComplex(points = self.pts, max_edge_length = self.epsilon)
+        if self.dm is not None:
+            rips_complex = gudhi.RipsComplex(distance_matrix=self.dm, max_edge_length = self.epsilon)
         simplex_tree = rips_complex.create_simplex_tree(max_dimension = p+1)
         val = simplex_tree.get_filtration()
         simplices = set()
