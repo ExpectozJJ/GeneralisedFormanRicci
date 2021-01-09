@@ -90,6 +90,8 @@ class GeneralisedFormanRicci:
         
         if distance_matrix is not None:
             self.dm = distance_matrix
+        else:
+            self.dm = None
 
         if points is not None:
             self.pts = np.array(points)
@@ -107,7 +109,7 @@ class GeneralisedFormanRicci:
         if self.method == "rips":
             try:
                 self.S = self.construct_rips(self.p)
-                print("Rips Complex Constructed.")
+                #print("Rips Complex Constructed.")
             except:
                 raise('epsilon not defined for rips method.')
         elif self.method == "alpha":
