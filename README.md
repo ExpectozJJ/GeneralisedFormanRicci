@@ -2,7 +2,6 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ExpectozJJ/GeneralisedFormanRicci/blob/master/tutorial/GeneralisedFormanRicci-demo.ipynb)
 [![Downloads](https://pepy.tech/badge/generalisedformanricci)](https://pepy.tech/project/generalisedformanricci)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
-[![CodeFactor](https://www.codefactor.io/repository/github/expectozjj/generalisedformanricci/badge/master)](https://www.codefactor.io/repository/github/expectozjj/generalisedformanricci/overview/master)
 ![Azure](https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/generalisedformanricci-feedstock?branchName=master)
 
 # GeneralisedFormanRicci
