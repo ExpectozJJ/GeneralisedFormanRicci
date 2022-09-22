@@ -75,3 +75,4 @@ for f in [0, 0.5, 1, 2, 3]:
 If you use this code in your research, please considering cite our paper:
 * JunJie Wee and Kelin Xia, Ollivier Persistent Ricci Curvature-Based Machine Learning for the Protein–Ligand Binding Affinity Prediction, Journal of Chemical Information and Modeling 2021 61 (4), 1617-1626
 * JunJie Wee, Kelin Xia, Forman persistent Ricci curvature (FPRC)-based machine learning models for protein–ligand binding affinity prediction, Briefings in Bioinformatics, 2021;, bbab136
+* D. Vijay Anand, Qiang Xu, JunJie Wee, Kelin Xia, Tze Chien Sum. Topological Feature Engineering for Machine Learning Based Halide Perovskite Materials Design. npj Computational Materials. 8, 203. (2022).
